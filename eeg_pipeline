@@ -1,0 +1,28 @@
+// Pipeline danych EEG
+digraph {
+	A [label=Start shape=ellipse]
+	B [label="Load EEG data from CSV" shape=box]
+	C [label="Clean data
+(remove unnecessary columns)" shape=box]
+	D [label="Normalize data
+(Robust Scaler)" shape=box]
+	E [label="Create fixed-length windows" shape=box]
+	F [label="Split data
+(Train/Validation/Test)" shape=box]
+	G [label="Train Siamese Network
+using PyTorch" shape=box]
+	H [label="Evaluate model
+using test set" shape=box]
+	I [label="Decision: User accepted
+or rejected?" shape=diamond]
+	J [label=End shape=ellipse]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I
+	I -> J
+}
