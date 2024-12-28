@@ -1,20 +1,20 @@
 // Pipeline danych EEG
 digraph {
 	A [label=Start shape=ellipse]
-	B [label="Load EEG data from CSV" shape=box]
-	C [label="Clean data
-(remove unnecessary columns)" shape=box]
-	D [label="Normalize data
+	B [label="Załadowanie danych w formacie CSV" shape=box]
+	C [label="Oczyszczenie danych
+(usunięcie nadmiarowych kolumn)" shape=box]
+	D [label="Normalizacja danych
 (Robust Scaler)" shape=box]
-	E [label="Create fixed-length windows" shape=box]
-	F [label="Split data
+	E [label="Zamiana danych w okienka" shape=box]
+	F [label="Podział na zbiory
 (Train/Validation/Test)" shape=box]
-	G [label="Train Siamese Network
-using PyTorch" shape=box]
-	H [label="Evaluate model
-using test set" shape=box]
-	I [label="Decision: User accepted
-or rejected?" shape=diamond]
+	G [label="Trenowanie sieci
+używając PyTorch" shape=box]
+	H [label="Sprawdzenie modelu
+używając zbioru testowego" shape=box]
+	I [label="Decyzja: Użytkownik zaakceptowany
+czy odrzucony?" shape=diamond]
 	J [label=End shape=ellipse]
 	A -> B
 	B -> C
