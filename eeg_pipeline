@@ -15,7 +15,7 @@ używając PyTorch" shape=box]
 używając zbioru testowego" shape=box]
 	I [label="Decyzja: Użytkownik zaakceptowany
 czy odrzucony?" shape=diamond]
-	J [label=End shape=ellipse]
+	J [label=Stop shape=ellipse]
 	A -> B
 	B -> C
 	C -> D
